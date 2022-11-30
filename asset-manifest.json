@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/composition-model/static/css/main.162750f5.css",
+    "main.css": "/composition-model/static/css/main.fd49b062.css",
     "main.js": "/composition-model/static/js/main.63fc658e.js",
     "static/media/gradient.jpg": "/composition-model/static/media/gradient.8fee4368fed228fd913d.jpg",
     "index.html": "/composition-model/index.html"
   },
   "entrypoints": [
-    "static/css/main.162750f5.css",
+    "static/css/main.fd49b062.css",
     "static/js/main.63fc658e.js"
   ]
 }
