@@ -1,0 +1,184 @@
+.app
+  inset: 0
+  background-image: url('./gradient.jpg')
+  background-size: cover
+
+$primary: #995188c7
+
+header
+  color: #fff
+  box-shadow: 0 0 1rem var(--headerShadow)
+  padding: 1rem
+  height: 1rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .header
+    font-size: 1.1rem
+  .buttons
+    display: flex
+    gap: 1rem
+    & > div
+      user-select: none
+      font-size: 0.8rem
+      padding: 0.5rem
+      border-radius: 0.3rem
+      background: #00000024
+      cursor: pointer
+      transition: background 0.1s
+      &:hover
+        background: #00000035
+    .theme
+      & > div
+        background-size: contain
+        width: 1rem
+        height: 1rem
+
+.section
+  display: flex
+  height: calc(100vh - 3rem)
+  & > div
+    overflow: auto
+
+.source
+  width: 50%
+  min-width: 12rem
+  background: var(--sourceBg)
+  transition: background 0.2s
+  padding: 1rem
+  &:focus
+    outline: unset
+  & > .block
+    margin-left: unset
+  & > .input + .label
+    margin-left: unset !important
+
+  .label
+    color: var(--labelColor)
+    font-size: 0.8rem
+
+  .block
+    margin-left: 1rem
+
+  .input
+    width: calc(100% - 0.4rem)
+    font-size: 1rem
+    padding: 0.2rem
+    margin: 0.2rem 0
+    border: unset
+    background: transparent
+    box-shadow: 0 0.02rem var(--labelColor)
+    transition: box-shadow 0.1s
+    margin-bottom: 0.5rem
+    &:focus
+      box-shadow: 0 0.12rem var(--labelColor)
+      outline: unset
+
+.visualization
+  width: 100%
+
+  .block
+    box-shadow: 0 0 0.4rem #00000017
+    border-radius: 0.3rem
+    display: grid
+    text-align: center
+    align-items: center
+    background: var(--blockBg)
+    transition: background 0.2s
+    overflow: hidden
+    margin: 0.5rem
+  .label
+    color: var(--labelColor)
+    font-size: 0.8rem
+    margin: 0.2rem 0
+  .children
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    &:empty
+      display: none
+  .input
+    text-align: center
+    font-size: 1rem
+    padding: 0.8rem
+    border: unset
+    min-width: 10rem
+    background: transparent
+    &:focus
+      background: var(--inputFocus)
+      outline: unset
+
+.dim
+  position: fixed
+  right: 0
+  left: 0
+  top: 0
+  bottom: 0
+  background: #00000070
+.popup
+  position: fixed
+  width: 60vmin
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  $radius: 0.3rem
+  .header
+    text-align: center
+    padding: 0.8rem 1.5rem
+    background: url('./gradient.jpg') center 70%
+    color: #fff
+    font-size: 1.1rem
+    border-radius: $radius $radius 0 0
+  .content
+    padding: 1rem 1.5rem
+    border-radius: 0 0 $radius $radius
+    background: var(--popupBg)
+    color: var(--popupColor)
+
+code
+  background: var(--codeBg)
+  padding: 0.25rem
+  border-radius: 0.3rem
+  font-size: 0.7rem
+
+p
+  margin: 0.2rem 0
+
+
+::-webkit-scrollbar
+  width: 5px
+
+::-webkit-scrollbar-thumb
+  background: #981579
+  border-radius: 10px
+
+::-webkit-scrollbar-track
+  background: #ffffff0a
+
+
+.app.light
+  .theme > div
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z'/%3E%3C/svg%3E")
+  --labelColor: #555
+  --inputFocus: #ffffff3f
+  --sourceBg: #ffffff6e
+  --blockBg: #ffffff4d
+  --headerShadow: #ffffff24
+  --codeBg: #dedede
+  --popupBg: #fff
+  --popupColor: #111
+
+.app.dark
+  .theme > div
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='https://www.w3.org/2000/svg' width='16' height='16' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z'/%3E%3C/svg%3E")
+  --labelColor: #d4d4d4
+  --inputFocus: #00000027
+  --sourceBg: #00000059
+  --blockBg: #00000031
+  --headerShadow: #00000024
+  --codeBg: #404040
+  --popupBg: #1c1c1c
+  --popupColor: #ddd
+  input 
+    color: #e6e6e6
